@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienzo Care - Votre application pour animaux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- En-tête de l'application -->
+    <header>
+        <h1>Bienzo Care</h1>
+        <p>L'assistant pour les propriétaires d'animaux</p>
+    </header>
+
+    <!-- Section de navigation principale -->
+    <nav>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#vet-locator">Localisation des Vétérinaires</a></li>
+            <li><a href="#reminders">Rappels</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section d'accueil -->
+    <section id="home">
+        <h2>Bienvenue sur Bienzo Care</h2>
+        <p>Accédez à des solutions fiables pour vos animaux de compagnie, même en déplacement.</p>
+        <button onclick="showAlert()">Télécharger l'App</button>
+    </section>
+
+    <!-- Section des services -->
+    <section id="services">
+        <h3>Nos Services</h3>
+        <div class="service">
+            <h4>Garde d'animaux</h4>
+            <p>Confiez votre animal à des gardiens de confiance lors de vos déplacements.</p>
+        </div>
+        <div class="service">
+            <h4>Localisation des vétérinaires</h4>
+            <p>Trouvez rapidement des vétérinaires proches en cas d'urgence.</p>
+        </div>
+        <div class="service">
+            <h4>Rappels de rendez-vous</h4>
+            <p>Recevez des rappels pour les soins réguliers de votre animal.</p>
+        </div>
+    </section>
+
+    <!-- Section de localisation des vétérinaires -->
+    <section id="vet-locator">
+        <h3>Localisation des Vétérinaires</h3>
+        <p>Utilisez notre carte pour trouver les vétérinaires les plus proches.</p>
+        <button onclick="findVets()">Trouver un Vétérinaire</button>
+        <div id="map">La carte apparaîtra ici.</div>
+    </section>
+
+    <!-- Section des rappels -->
+    <section id="reminders">
+        <h3>Rappels de Rendez-vous</h3>
+        <p>Configurez des rappels pour les visites vétérinaires et les soins de votre animal.</p>
+        <button onclick="addReminder()">Ajouter un Rappel</button>
+        <ul id="reminderList"></ul>
+    </section>
+
+    <!-- Section de contact -->
+    <section id="contact">
+        <h3>Contactez-nous</h3>
+        <form>
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bienzo Care. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
